@@ -24,3 +24,6 @@ echo "Done!"
 echo "System information:"
 # Use the "uname" command to display information about the operating system.
 uname -a
+
+# Use the "lsb_release" command to display information about the Linux distribution.
+lsb_release -a
