@@ -32,5 +32,10 @@ lsb_release -a
 echo "Use the "lscpu" command to display information about the CPU:"
 lscpu
 
-echo " Use the "free" command to display information about memory usage."
+echo " Use the "free" command to display information about memory usage: "
 free -m
+
+echo "Use the "df" command to display information about disk usage: "
+df -h
+
+echo "Done!"
