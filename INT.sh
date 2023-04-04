@@ -7,7 +7,17 @@ echo "Checking for missing security updates..."
 # The "--security" option filters the results to show only security-related updates.
 # The "-C" option means "cache-only mode", which uses the local cache of package metadata instead of fetching new metadata from a remote repository.
 # Redirect the output to a file.
-yum -q check-update --security -C 
+yum -q check-update --security -C > /tmp/security_updates.txt
+
+# If the file is empty, then there are no security updates available.
+if [ ! -s /tmp/security_updates.txt ]; then
+  echo "There are no missing security updates."
+else
+  echo "The following security updates are missing:"
+  # Display the contents of the file, which lists the security updates that are missing.
+  cat /tmp/security_updates.txt
+fi
+
 
 echo "Done!"
 
