@@ -22,8 +22,15 @@ fi
 echo "Done!"
 
 echo "System information:"
-# Use the "uname" command to display information about the operating system.
+
+echo " Use the "uname" command to display information about the operating system:"
 uname -a
 
-# Use the "lsb_release" command to display information about the Linux distribution.
+echo "Use the "lsb_release" command to display information about the Linux distribution : "
 lsb_release -a
+
+echo "Use the "lscpu" command to display information about the CPU:"
+lscpu
+
+echo " Use the "free" command to display information about memory usage."
+free -m
