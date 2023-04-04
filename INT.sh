@@ -21,3 +21,6 @@ fi
 
 echo "Done!"
 
+echo "System information:"
+# Use the "uname" command to display information about the operating system.
+uname -a
